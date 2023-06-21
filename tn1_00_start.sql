@@ -28,6 +28,9 @@ create table tn1_table (
     updated                        date not null,
     updated_by                     varchar2(255 char) not null
 )
+ partition by list (tenant_id) automatic  
+ (partition p_0 values (0)  
+)
 ;
 
 
